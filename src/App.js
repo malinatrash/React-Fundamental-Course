@@ -13,16 +13,9 @@ function App() {
         {id: 5, title: 'C++', body: 'brutality man'}
     ]);
     const [post, setPost] = useState({title: '', body: ''});
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
     const addNewPost = (e) => {
         e.preventDefault();
-        const newPost = {
-            id: Date.now(),
-            title,
-            body
-        }
-        setPosts([...posts, newPost])
+        setPosts([...posts, {...post, id: Date.now(), title: post.title, body: post.body}])
         setPost({title: '', body: ''})
     }
 
