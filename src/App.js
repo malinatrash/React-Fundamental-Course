@@ -1,42 +1,51 @@
 import './styles/App.css';
-import {useState} from "react";
+import {useState, useMemo} from "react";
 import PostList from "./components/PostList";
 import PostForm from "./components/PostForm";
-import MySelect from "./components/UI/select/MySeleсt";
+import PostFilter from "./components/PostFilter";
+import MyModal from "./components/UI/MyModal/MyModal";
+import MyButton from "./components/UI/button/MyButton";
 
 function App() {
     const [posts, setPosts] = useState([]);
-    const [selectedSort, setSelectedSort] = useState("");
+    const [filter, setFilter] = useState({sort: '', query: ''});
+    const [modal, setModal] = useState(false);
+
+    const sortedPosts = useMemo(() => {
+        console.log('хук отработал');
+        if (filter.sort) {
+            return [...posts].sort((a, b) => a[filter.sort].localeCompare(b[filter.sort]));
+        }
+        return posts;
+    }, [filter.sort, posts]);
+    
+    const sortedAndSearchedPosts = useMemo(() => {
+        return sortedPosts.filter(post => post.title.toLowerCase().includes(filter.query.toLowerCase()));
+    }, [filter.query, sortedPosts]);
 
     const createPost = (newPost) => {
-        setPosts([...posts, newPost])
+        setPosts([...posts, newPost]);
+        setModal(false);
     };
 
     const removePost = (post) => {
-        setPosts(posts.filter(p => p.id !== post.id))
-    };
-
-    const sortPosts = (sort) => {
-        setSelectedSort(sort);
-        setPosts([...posts].sort((a, b) => a[sort].localeCompare(b[sort])));
+        setPosts(posts.filter(p => p.id !== post.id));
     };
 
     return (
     <div className="App">
-        <PostForm create={createPost}/>
-        <MySelect
-            value={selectedSort}
-            onChange={sortPosts}
-            defaultValue="Сортировка по:"
-            options={[
-                {value: 'title', name: "Названию"},
-                {value: 'body', name: "Описанию"},
-            ]}
+        <MyButton style={{marginTop: 30}} onClick={() => setModal(true)}>
+            Создать пост
+        </MyButton>
+        <MyModal visible={modal} setVisible={setModal}>
+            <PostForm create={createPost}/>
+        </MyModal>
+        <hr style={{margin: '15px 0'}}/>
+        <PostFilter
+            filter={filter}
+            setFilter={setFilter}
         />
-        {posts.length !== 0
-            ? <PostList remove={removePost} posts={posts} title={'Список постов'}/>
-            : <h2 style={{textAlign: "center"}}>Посты не найдены!</h2>
-        }
+        <PostList remove={removePost} posts={sortedAndSearchedPosts} title={'Список постов'}/>
     </div>
   );
 }
