@@ -15,6 +15,7 @@ const App = () => {
     const [filter, setFilter] = useState({sort: '', query: ''});
     const [modal, setModal] = useState(false);
     const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
+
     const [fetchPosts, isPostLoading, postError] = useFetching(async () => {
         const response = await PostService.getAll();
         setPosts(response);
@@ -46,6 +47,9 @@ const App = () => {
             filter={filter}
             setFilter={setFilter}
         />
+        {postError &&
+            <h1>Произошла ошибка! ${postError}</h1>
+        }
         {isPostLoading
             ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 50}}><Loader/></div>
             :
