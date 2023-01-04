@@ -1,8 +1,10 @@
 import React from 'react';
+import classes from "../button/MyButton.module.css"
 
 const MySelect = ({options, defaultValue, value, onChange}) => {
     return (
         <select
+            className={classes.myBtn}
             value={value}
             onChange={event => onChange(event.target.value)}
         >

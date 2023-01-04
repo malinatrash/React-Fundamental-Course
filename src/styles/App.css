@@ -36,3 +36,21 @@
     transform: translateX(-350px);
     transition: all 700ms ease-in;
 }
+
+.page__wrapper {
+    margin-top: 30px;
+    display: flex;
+}
+
+.page {
+    padding: 10px;
+    border: 1px solid pink;
+    border-radius: 90px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.page__current {
+    border: 2px solid crimson;
+    font-weight: bold;
+}
