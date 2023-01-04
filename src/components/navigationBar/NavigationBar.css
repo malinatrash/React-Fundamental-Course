@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Manrope:wght@400;800&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+.img {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+:root{
+    --white: rgb(253, 253, 253);
+    --black:rgb(38, 38, 38);
+    --light-black:rgba(80, 80, 80, 0.201);
+    --grey:rgba(80, 80, 80, 0.744);
+}
+*{
+    /*width: 100vw;*/
+    font-family: 'Manrope', sans-serif !important;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-size:15px;
+}
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+nav{
+    display:flex;
+    background-color: rgb(253, 253, 253);
+    padding:16px 32px;
+    border-bottom:0.1px solid rgb(225, 225, 225);
+    justify-content:space-between;
+    align-items:center;
+}
+.nav-main{
+    display:flex;
+    gap:32px;
+    align-items: center;
+}
+.logo-text {
+    margin-left: 20px;
+}
+.logo{
+    text-decoration: var(--grey);
+    font-size:16px;
+    text-transform: uppercase;
+    font-weight:bold;
+    letter-spacing: 4px;
+}
+.logo span{
+    color:rgb(169, 185, 185);
+}
+.nav-links{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link{
+    text-decoration: none;
+}
+
+.btn{
+    margin: 7px;
+    border-radius:50px;
+    border:none;
+
+}
+
+.btn-primary{
+    background-color:var(--black);
+    color:var(--white);
+}
+
+.btn-secondary{
+    background-color:var(--white);
+    color:var(--black);
+    border:0.1px solid rgb(225, 225, 225);
+}
+.btn-primary:hover, .btn-secondary:hover{
+    background-color:var(--light-black);
+    color:var(--black);
+    transition:all 0.5s ease;
+}
+.nav-mobile{
+    display:none;
+    background-color:var(--light-black);
+    padding:48px;
+    list-style: none;
+    transition: all 15s ease;
+}
