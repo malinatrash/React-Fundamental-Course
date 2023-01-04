@@ -38,16 +38,19 @@
 }
 
 .page__wrapper {
+    align-items: center;
+    margin-bottom: 30px;
     margin-top: 30px;
     display: flex;
 }
 
 .page {
-    padding: 10px;
+    margin: 4px;
+    text-align: center;
+    padding: 13px;
     border: 1px solid pink;
-    border-radius: 90px;
+    border-radius: 50px;
     cursor: pointer;
-    width: 100%;
 }
 
 .page__current {
