@@ -1,5 +1,6 @@
 import React from 'react';
 import './ErrorPage.css';
+import {Link} from "react-router-dom";
 
 const Error = () => {
     return(
@@ -28,7 +29,7 @@ const Error = () => {
                         <p class="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
                     </div>
                     <div class="error__nav e-nav">
-                        <a href="" target="_blanck" class="e-nav__link"></a>
+                        <Link to="/" target="_blanck" className="e-nav__link"></Link>
                     </div>
                 </div>
             </section>
