@@ -20,7 +20,7 @@ const NavigationBar = () => {
 
                 <div className="nav-links">
                     <Link to='/signin' className="btn btn-secondary">Войти</Link>
-                    <Link to='/signup' className="btn btn-primary">Зарегистрироваться</Link>
+                    <Link to='/signup' className="btn btn-secondary">Зарегистрироваться</Link>
                     <button
                         onClick={() => setAboutModal(true)}
                         to='/about'

@@ -8,3 +8,15 @@
     cursor: pointer;
     margin-top: 5px;
 }
+
+.btn{
+    margin: 7px;
+    border-radius:50px;
+    border:none;
+
+}
+
+.btn-primary{
+    background-color:var(--black);
+    color:var(--white);
+}
