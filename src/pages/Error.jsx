@@ -6,30 +6,30 @@ const Error = () => {
     return(
         <div className="main">
             <div>
-                <div class="starsec"></div>
-                <div class="starthird"></div>
-                <div class="starfourth"></div>
-                <div class="starfifth"></div>
+                <div className="starsec"></div>
+                <div className="starthird"></div>
+                <div className="starfourth"></div>
+                <div className="starfifth"></div>
             </div>
 
-            <div class="lamp__wrap">
-                <div class="lamp">
-                    <div class="cable"></div>
-                    <div class="cover"></div>
-                    <div class="in-cover">
-                        <div class="bulb"></div>
+            <div className="lamp__wrap">
+                <div className="lamp">
+                    <div className="cable"></div>
+                    <div className="cover"></div>
+                    <div className="in-cover">
+                        <div className="bulb"></div>
                     </div>
-                    <div class="light"></div>
+                    <div className="light"></div>
                 </div>
             </div>
-            <section class="error">
-                <div class="error__content">
-                    <div class="error__message message">
-                        <h1 class="message__title">Page Not Found</h1>
-                        <p class="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
+            <section className="error">
+                <div className="error__content">
+                    <div className="error__message message">
+                        <h1 className="message__title">Page Not Found</h1>
+                        <p className="message__text">We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our.</p>
                     </div>
-                    <div class="error__nav e-nav">
-                        <Link to="/" target="_blanck" className="e-nav__link"></Link>
+                    <div className="error__nav e-nav">
+                        <Link to="/ReactBegin/posts" className="e-nav__link"></Link>
                     </div>
                 </div>
             </section>

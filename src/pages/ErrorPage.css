@@ -1,40 +1,8 @@
 @charset "UTF-8";
 
-/***********************************
-			/* 1. BODY */
-/***********************************/
-
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    -webkit-text-size-adjust: none;*/
-/*}*/
-
-/*html, body {*/
-/*    height: 100%;*/
-/*    overflow: hidden;*/
-/*}*/
-
-/*body {*/
-/*    padding: 0;*/
-/*    margin: 0;*/
-/*    !*background: #181828;*!*/
-/*    font-size: 14px;*/
-/*    line-height: 1;*/
-/*}*/
-
 label {
     cursor: pointer;
 }
-
-/*a {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*    vertical-align: baseline;*/
-/*    background: transparent;*/
-/*    text-decoration: none;*/
-/*    color: #000;*/
-/*}*/
 
 input, select, button, textarea {
     margin: 0;
@@ -153,13 +121,6 @@ button {
     zoom: 1;
 }
 
-/* 1. END BODY */
-/***********************************/
-
-/***********************************
-			/* 2. CONTENT */
-/***********************************/
-/* 2.1. Section error */
 .error {
     min-height: 100vh;
     position: relative;
@@ -339,10 +300,10 @@ button {
 /* 2.3. Lamp */
 .lamp {
     position: absolute;
-    left: 0px;
+    left: 0;
     right: 0;
-    top: 0px;
-    margin: 0px auto;
+    top: 0;
+    margin: 0 auto;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -387,9 +348,9 @@ button {
     border-radius: 100%;
     background: #08ffff;
     position: absolute;
-    left: 0px;
-    right: 0px;
-    margin: 0px auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     bottom: -9px;
     z-index: 100;
 }
@@ -399,37 +360,30 @@ button {
     background-color: #08fffa;
     border-radius: 50%;
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     bottom: -20px;
-    margin: 0px auto;
+    margin: 0 auto;
     -webkit-box-shadow: 0 0 15px 7px rgba(0,255,255,0.8), 0 0 40px 25px rgba(0,255,255,0.5), -75px 0 30px 15px rgba(0,255,255,0.2);
-    box-shadow: 0 0 25px 7px rgb(127 255 255 / 80%), 0 0 64px 47px rgba(0,255,255,0.5), 0px 0 30px 15px rgba(0,255,255,0.2);
+    box-shadow: 0 0 25px 7px rgb(127 255 255 / 80%), 0 0 64px 47px rgba(0,255,255,0.5), 0 0 30px 15px rgba(0,255,255,0.2);
 }
 
 
 .light {
     width: 200px;
-    height: 0px;
+    height: 0;
     border-bottom: 900px solid rgb(44 255 255 / 24%);
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     position: absolute;
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     top: 270px;
-    margin: 0px auto;
+    margin: 0 auto;
     z-index: 1;
-    border-radius: 90px 90px 0px 0px;
+    border-radius: 90px 90px 0 0;
 }
-/* 2.3. END Lamp */
-/***********************************
-			/* 2. END CONTENT */
-/***********************************/
 
-/***********************************
-			/* 3. RESPONSIVE */
-/***********************************/
 .error {
     overflow: hidden;
     max-height: 100vh;

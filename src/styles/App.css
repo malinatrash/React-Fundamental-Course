@@ -5,8 +5,7 @@
 }
 
 #root {
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .App {
@@ -38,10 +37,12 @@
 }
 
 .page__wrapper {
-    align-items: center;
+    width: 100%;
     margin-bottom: 30px;
     margin-top: 30px;
-    display: flex;
+    /*display: flex;*/
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .page {

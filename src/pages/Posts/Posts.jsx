@@ -1,15 +1,16 @@
 import {useEffect, useState} from "react";
-import {usePosts} from "../hooks/usePosts";
-import PostService from "../API/PostService";
-import {useFetching} from "../hooks/useFetching";
-import {getPageCount} from "../utils/pages";
-import PostForm from "../components/PostForm";
-import MyButton from "../components/UI/button/MyButton";
-import PostFilter from "../components/PostFilter";
-import MyModal from "../components/UI/MyModal/MyModal";
-import PostList from "../components/PostList";
-import Loader from "../components/UI/Loader/Loader";
-import Pagination from "../components/UI/pagination/Pagination";
+import {usePosts} from "../../hooks/usePosts";
+import PostService from "../../API/PostService";
+import {useFetching} from "../../hooks/useFetching";
+import {getPageCount} from "../../utils/pages";
+import PostForm from "../../components/PostForm";
+import MyButton from "../../components/UI/button/MyButton";
+import PostFilter from "../../components/PostFilter";
+import MyModal from "../../components/UI/MyModal/MyModal";
+import PostList from "../../components/PostList";
+import Loader from "../../components/UI/Loader/Loader";
+import Pagination from "../../components/UI/pagination/Pagination";
+import classes from './posts.module.css';
 
 
 const Posts = () => {
@@ -17,7 +18,7 @@ const Posts = () => {
     const [filter, setFilter] = useState({sort: '', query: ''});
     const [modal, setModal] = useState(false);
     const [totalPages, setTotalPages] = useState(0);
-    const [limit] = useState(10);
+    const [limit] = useState(13);
     const [page, setPage] = useState(1);
     const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
 
@@ -47,7 +48,7 @@ const Posts = () => {
     }
 
     return (
-        <div className="Posts">
+        <div className={classes.posts}>
             <MyButton style={{marginTop: 30}} onClick={() => setModal(true)}>
                 Создать пост
             </MyButton>
