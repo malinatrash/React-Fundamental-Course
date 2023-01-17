@@ -13,6 +13,7 @@ const AppRouter = () => {
                 <Route path='/ReactBegin/about' element={<About/>}/>
                 <Route path='/ReactBegin/error' element={<Error/>}/>
                 <Route path='/ReactBegin/*' element={<Navigate to="/ReactBegin/error" replace />} />)
+                <Route path='/ReactBegin/' element={<Navigate to="/ReactBegin/posts" replace />} />)
                 <Route path='/' element={<Navigate to="/ReactBegin/posts" replace />} />)
             </Routes>
         </div>
