@@ -13,7 +13,9 @@ const NavigationBar = () => {
                     <Link
                         to='/ReactBegin/posts'
                         className="logo">
-                        <img className='img' src='https://www.pngmart.com/files/21/Funny-PNG-Isolated-HD-Pictures.png' alt=''/>
+                        <img
+                            className='img'
+                            src='https://www.pngmart.com/files/21/Funny-PNG-Isolated-HD-Pictures.png' alt=''/>
                         <span className='logo-text'>ржака.com</span>
                     </Link>
                 </div>

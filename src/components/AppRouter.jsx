@@ -4,12 +4,14 @@ import About from "../pages/About";
 import Error from "../pages/Error";
 import classes from '../components/UI/AppRouter.module.css'
 import React from "react";
+import PostIdPage from "../pages/PostIdPage";
 
 const AppRouter = () => {
     return(
         <div className={classes.router}>
             <Routes>
                 <Route path='/ReactBegin/posts' element={<Posts/>}/>
+                <Route path='/ReactBegin/posts/:id' element={<PostIdPage/>}/>
                 <Route path='/ReactBegin/about' element={<About/>}/>
                 <Route path='/ReactBegin/error' element={<Error/>}/>
                 <Route path='/ReactBegin/*' element={<Navigate to="/ReactBegin/error" replace />} />)
