@@ -1,4 +1,4 @@
 .button-container {
-    display: flex;
+    display: grid;
     height: 55px;
 }
